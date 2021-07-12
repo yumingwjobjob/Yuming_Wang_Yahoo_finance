@@ -5,4 +5,5 @@ class notion_of_position_calculation:
             raw_price = yahoo_finance_api.get_regular_market_previous_close_symbol(symbol)
             quantity = float(quantity)
             final_price = raw_price * quantity
+            final_price = "{:.2f}".format(final_price)
             return final_price
