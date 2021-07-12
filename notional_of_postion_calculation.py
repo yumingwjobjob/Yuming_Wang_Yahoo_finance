@@ -1,3 +1,7 @@
+import yahoo_finance_api_client
 class notion_of_position_calculation:
         def get_notional_of_position(quantity, symbol):
-            
+            yahoo_finance_api = yahoo_finance_api_client()
+            raw_price = yahoo_finance_api.get_regular_market_previous_close_symbol(symbol)
+            final_price = raw_price * quantity
+            return final_price
