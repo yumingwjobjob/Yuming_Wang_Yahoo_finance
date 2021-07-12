@@ -1,7 +1,7 @@
 import requests
 import json
 class yahoo_finance_api:
-    def get_regular_market_previous_close_symbol(symbol):
+    def get_regular_market_previous_close_symbol(self,symbol):
         url = "https://apidojo-yahoo-finance-v1.p.rapidapi.com/stock/v2/get-summary"
 
         querystring = {"symbol":symbol,"region":"US"}
