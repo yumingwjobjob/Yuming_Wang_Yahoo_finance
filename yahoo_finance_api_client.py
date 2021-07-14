@@ -4,11 +4,10 @@ class yahoo_finance_api:
 
     #set a singleton method
     __instance = None
-    def get_instance():
-
+    def get_instance(self):
         if yahoo_finance_api.__instance == None:
             yahoo_finance_api()
-            return yahoo_finance_api.__instance
+        return yahoo_finance_api.__instance
     
     def __init__(self):
         if yahoo_finance_api.__instance != None:
