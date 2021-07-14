@@ -4,6 +4,7 @@ class yahoo_finance_api:
 
     #set a singleton method
     __instance = None
+    #@staticmethod
     def get_instance(self):
         if yahoo_finance_api.__instance == None:
             yahoo_finance_api()
